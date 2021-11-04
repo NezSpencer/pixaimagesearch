@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="thumbnailImageHeight">100dp</dimen>
+    <dimen name="view_margin_normal">8dp</dimen>
+    <dimen name="view_margin_large">16dp</dimen>
+</resources>
