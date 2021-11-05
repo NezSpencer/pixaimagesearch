@@ -74,6 +74,7 @@ class DashboardFragment : Fragment() {
     override fun onSaveInstanceState(outState: Bundle) {
         if (::confirmDialog.isInitialized && confirmDialog.isShowing) {
             confirmDialog.dismiss()
+            viewModel.isDialogOpen = true
         }
         val position = (binding.rvImages.layoutManager as GridLayoutManager).findFirstCompletelyVisibleItemPosition()
         outState.putInt(KEY_LIST_POSITION, position)
@@ -97,7 +98,6 @@ class DashboardFragment : Fragment() {
                 .setTitle("Show detail")
                 .setPositiveButton("Continue"
                 ) { _, _ ->
-                    viewModel.isDialogOpen = false
                     findNavController().navigate(
                         DashboardFragmentDirections.actionDashboardFragmentToImageDetailFragment(
                             imageData
@@ -106,11 +106,10 @@ class DashboardFragment : Fragment() {
                 }
                 .setNegativeButton("Cancel")
                 {dialogInterface, _ ->
-                    viewModel.isDialogOpen = false
                     dialogInterface.dismiss()
                 }
                 .create()
-            confirmDialog.setCanceledOnTouchOutside(false)
+            confirmDialog.setOnDismissListener { viewModel.isDialogOpen = false }
         }
         confirmDialog.show()
         viewModel.isDialogOpen = true

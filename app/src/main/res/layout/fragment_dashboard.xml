@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingStart="@dimen/view_margin_normal"
+    android:paddingTop="@dimen/view_margin_normal"
     android:paddingEnd="@dimen/view_margin_large">
 
     <com.google.android.material.textfield.TextInputEditText
