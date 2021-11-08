@@ -5,7 +5,7 @@ Architecture: MVVM
 
 Language: Kotlin
 
-UI: Xml-based layouts
+UI: Xml-based layouts (The jetpack compose UI equivalent can be found in the `jetpackCompose` branch)
 
 build system: Gradle Kotlin DSL
 
