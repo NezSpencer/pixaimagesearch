@@ -34,6 +34,8 @@ object DependencyVersion {
     const val navigation = "2.3.5"
     const val fragmentKtx = "1.3.6"
     const val activityKtx = "1.4.0"
+    const val compose = "1.0.1"
+    const val accompanist = "0.11.0"
 }
 
 object AppClasspath {
@@ -58,6 +60,20 @@ object MainDependency {
     private const val activityKtx = "androidx.activity:activity-ktx:${DependencyVersion.activityKtx}"
     private const val fragmentKtx = "androidx.fragment:fragment-ktx:${DependencyVersion.fragmentKtx}"
 
+    //jetpack compose
+    private const val composeActivity = "androidx.activity:activity-compose:1.3.1"
+    private const val composeMaterial = "androidx.compose.material:material:1.0.1"
+    private const val composeAnimation = "androidx.compose.animation:animation:1.0.1"
+    private const val composeUi =  "androidx.compose.ui:ui:1.0.1"
+    private const val composeFoundation = "androidx.compose.foundation:foundation:1.0.1"
+    private const val composeTooling = "androidx.compose.ui:ui-tooling:1.0.1"
+    private const val composeViewModel = "androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha07"
+    private const val composeLivedata = "androidx.compose.runtime:runtime-livedata:1.0.1"
+    private const val coilCompose = "io.coil-kt:coil-compose:1.4.0" //ImageLoading
+    private const val composeNavigation = "androidx.navigation:navigation-compose:2.4.0-beta02"
+    private const val hiltJetpackNavigation = "androidx.hilt:hilt-navigation-compose:1.0.0-alpha03"
+    private const val accopanistInset = "com.google.accompanist:accompanist-insets:${DependencyVersion.accompanist}"
+
     private const val retrofit = "com.squareup.retrofit2:retrofit:${DependencyVersion.retrofit}"
     private const val retrofitMoshiConverter = "com.squareup.retrofit2:converter-moshi:${DependencyVersion.retrofit}"
     private const val okHttpInterceptor = "com.squareup.okhttp3:logging-interceptor:${DependencyVersion.okHttp}"
@@ -70,9 +86,6 @@ object MainDependency {
     //DI
     private const val hilt = "com.google.dagger:hilt-android:${DependencyVersion.hilt}"
     private const val kaptHilt = "com.google.dagger:hilt-compiler:${DependencyVersion.hilt}"
-    //navigation
-    private const val navFragment = "androidx.navigation:navigation-fragment-ktx:${DependencyVersion.navigation}"
-    private const val navUI = "androidx.navigation:navigation-ui-ktx:${DependencyVersion.navigation}"
     //for apple silicon macs
     private const val kaptJDBC = "org.xerial:sqlite-jdbc:3.34.0"
 
@@ -95,10 +108,21 @@ object MainDependency {
         room,
         roomKtx,
         hilt,
-        navFragment,
-        navUI,
         activityKtx,
-        fragmentKtx
+        fragmentKtx,
+        //compose
+        composeActivity,
+        composeAnimation,
+        composeFoundation,
+        composeLivedata,
+        composeMaterial,
+        composeTooling,
+        composeUi,
+        composeViewModel,
+        coilCompose,
+        composeNavigation,
+        accopanistInset,
+        hiltJetpackNavigation
     )
 
     val kaptLibs = listOf(

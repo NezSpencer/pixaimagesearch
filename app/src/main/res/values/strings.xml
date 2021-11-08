@@ -3,4 +3,11 @@
     <string name="created_by_prompt">Created by: %s</string>
     <string name="label_created_by">Created by</string>
     <string name="prompt_search">Search</string>
+    <string name="description_num_of_likes">Number of likes</string>
+    <string name="description_num_of_dowloads">Number of downloads</string>
+    <string name="description_num_of_comments">Number of comments</string>
+    <string name="prompt_confirm_dialog_message">Click Yes to open the image detail screen</string>
+    <string name="title_confirm_dialog">Confirm action</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_yes">Yes</string>
 </resources>
